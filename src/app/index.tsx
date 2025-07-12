@@ -7,6 +7,7 @@ import {
   View,
 } from "react-native";
 import { DebugAuth } from "../components/DebugAuth";
+import { LogoFeelRun } from "../components/LogoFeelRun";
 import { RunningSession } from "../components/RunningSession";
 import { useSpotifyAuth } from "../hooks/useSpotifyAuth";
 
@@ -46,8 +47,13 @@ export default function Index() {
       <View className="flex-1 justify-center items-center bg-gray-50 p-6">
         <View className="bg-white rounded-2xl p-8 shadow-lg max-w-sm w-full">
           <View className="items-center mb-8">
-            <View className="w-20 h-20 bg-green-500 rounded-full items-center justify-center mb-4">
-              <Text className="text-white text-3xl font-bold">🏃</Text>
+            <View>
+              <LogoFeelRun
+                sourcePath={require("../../public/images/logo_sem_subtitulo.png")}
+                height={176}
+                width={176}
+                resizeMode="cover"
+              />
             </View>
             <Text className="text-2xl font-bold text-gray-800 mb-2">
               Feel Run
@@ -116,12 +122,12 @@ export default function Index() {
       {/* Header */}
       <View className="bg-white shadow-sm pt-12 pb-4 px-4">
         <View className="flex-row items-center justify-between">
-          <View>
-            <Text className="text-2xl font-bold text-gray-800">Feel Run</Text>
-            <Text className="text-gray-600">
-              Assistente de música para corrida
-            </Text>
-          </View>
+          <LogoFeelRun
+            sourcePath={require("../../public/images/avatar_2.png")}
+            height={44}
+            width={44}
+            resizeMode="cover"
+          />
           <TouchableOpacity
             onPress={handleLogout}
             className="bg-gray-200 px-4 py-2 rounded-lg"
@@ -131,7 +137,6 @@ export default function Index() {
         </View>
       </View>
 
-      {/* Conteúdo Principal */}
       <RunningSession />
     </View>
   );
