@@ -32,7 +32,7 @@ export const RunningSession = () => {
           },
           style: "default",
         },
-      ]
+      ],
     );
   };
 
@@ -41,7 +41,7 @@ export const RunningSession = () => {
   return (
     <ScrollView className="flex-1 bg-gray-50">
       <View className="p-6">
-        <View className="items-center mb-8">
+        <View className="mb-8 items-center">
           <View>
             <LogoFeelRun
               sourcePath={require("../../public/images/logo_sem_subtitulo.png")}
@@ -50,15 +50,15 @@ export const RunningSession = () => {
               resizeMode="cover"
             />
           </View>
-          <Text className="text-3xl font-bold text-gray-800 mb-2">
+          <Text className="mb-2 text-3xl font-bold text-gray-800">
             Feel Run
           </Text>
-          <Text className="text-gray-600 text-center text-lg">
+          <Text className="text-center text-lg text-gray-600">
             Sinta a corrida e chegue ao seu potencial máximo
           </Text>
         </View>
 
-        <TouchableOpacity className="bg-green-500 rounded-md flex-row items-center justify-center py-2 gap-1 text-red-500">
+        <TouchableOpacity className="flex-row items-center justify-center gap-1 rounded-md bg-green-500 py-2 text-red-500">
           <Text className="text-lg font-semibold">Iniciar Corrida</Text>
           <MaterialCommunityIcons name="fire" size={24} color="#ef4444" />
         </TouchableOpacity>
